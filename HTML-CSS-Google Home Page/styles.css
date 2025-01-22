@@ -34,16 +34,21 @@ button{
     align-items:center;
     gap:1rem
 }
-.text-link{
+.text-link,
+footer a{
     /*same color as default font so we dont get blue color for links*/
     color:inherit;
     /*to remove default underline for anchortags*/
     text-decoration: none;
 }
-.text-link:hover{
+.text-link:hover,
+footer a:hover{
     /*To add underline when hovering over the text link*/
     text-decoration: underline;
 }
+.div-container-second .text-link{
+    display:none;
+    }
 .icon-link{
     font-size: 1rem;
     color:inherit;
@@ -83,39 +88,18 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 1rem;
-padding: 1rem;/* to give a border to the input-bar of 1 rem*/
+padding: 4rem 1rem;/* to give a border to the input-bar of 1 rem*/
 
     }
     .title-text{
       font-size: 4rem;
     
     }
-    .google-text{
-        display: flex;
-        flex-direction: row;
-        font-family: 'Open Sans', sans-serif;
+    .google-image{
+        width: 300px;  /* Adjust the width to match the Google logo size */
+      height: auto;  /* Maintain aspect ratio */
     }
-
-    .letter-g{
-        color: blue
-       
-    }
-    .letter-o{
-        color: red
-    }
-    .letter-o2{
-        color: yellow
-    }
-    .letter-g2{
-        color: blue
-    }
-    .letter-l{
-        color: green
-    }
-    .letter-e{
-        color: red
-    }
-
+    
     
 .input-bar{
         display:flex;
@@ -213,7 +197,11 @@ gap:1rem;
     align-items:center;
     gap:1rem;
 }
+/*Media query when the screen size is 600px first we do it for mobile layout*/
 @media (min-width: 640px){
+    .div-container-second .text-link{
+        display:block;
+        }
     .footer-grid{
         display:flex;
         flex-direction: row;
