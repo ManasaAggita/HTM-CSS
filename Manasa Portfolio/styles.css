@@ -33,8 +33,20 @@ body{
     gap:6rem;
 }
 p{
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.5rem;
+}
+/*For highlighting the background upon selection, this selects every paragraph text possible*/
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection{
+background: var(--color-accent);
+color: #0f172a;
+
 }
 .underlay{
 
@@ -96,4 +108,27 @@ section h2{
     display: flex;
     flex-direction: column;
     gap:1rem;
+}
+.anchor-text{
+    color: var(--color-highlight);
+    text-decoration: none;
+}
+.anchor-text:hover{
+    color: var(--color-accent);
+    /*doesnot change colr instantly*/
+    transition-duration: 200ms;
+}
+.experience-contents{
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.experience-card{
+ 
+    display:grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap:0.5rem;
+}
+.tenure{
+    opacity: 0.7;
 }
