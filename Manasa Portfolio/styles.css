@@ -200,5 +200,7 @@ section h2{
 .project-stat-link{
     display:flex;
     gap:0.5rem;
-    
+    object-fit:cover
+
+
 }
